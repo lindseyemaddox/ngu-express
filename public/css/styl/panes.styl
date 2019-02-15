@@ -1,0 +1,334 @@
+
+.logo.fade
+  display: none
+  left: 35px
+  position: absolute
+  top: 66px
+  width: 186px
+
+#intro .logo
+  width: 523px
+  margin-bottom: 62px
+  margin-top: $top-margin - 56px
+
+.poop:target .logo.small
+  display: block
+
+a
+  color: $lightest-blue
+  text-decoration: none
+  transition: color 400ms ease
+  &:hover
+    color: $gold
+
+.tagline
+  font-size: 1.625em
+  margin-bottom: 40px
+  primary-type($serif, $bold)
+  line-height: 1.154em
+
+h2.subhead
+  font-size: 1.375em
+  margin-bottom: 40px
+  primary-type($serif, $regular)
+  font-style: italic
+  line-height: 1.636em
+
+p
+  &.intro
+    font-size: 1.125em
+    primary-type($sans, $regular)
+    line-height: 1.666em
+
+  &.subhead
+    font-size: 1.125em
+    margin-bottom: 30px
+    primary-type($serif, $regular)
+    line-height: 1.666em
+
+h3.headline
+  font-size: 1.125em
+  letter-spacing: 1px
+  margin-bottom: 10px
+  primary-type($sans, $regular)
+  line-height: 1.333em
+  text-transform: uppercase
+
+.three li
+  font-size: 1.125em
+  primary-type($serif, $bold)
+  line-height: 2em
+
+  &.head
+    font-size: 1.25em
+    letter-spacing: 3px
+    margin-bottom: 10px
+    primary-type($serif, $bold)
+    text-transform: uppercase
+
+ul.reg li
+  font-size: 1em
+  primary-type($serif, $regular)
+  line-height: 2em
+
+
+
+
+/* ---------- staff image ----------*/
+
+
+
+
+.name
+  opacity: 0
+
+.staff
+  height: 28vh
+  position: relative
+
+  img
+    filter: grayscale(1)
+    transition: filter 400ms ease
+    z-index: 0
+
+  & > a
+    bottom: 0
+    color: $white
+    position: absolute
+
+    &:hover,
+    &.selected,
+    &:first-child
+      img
+        filter: grayscale(0)
+
+      .name
+        opacity: 1
+
+    &.selected .name,
+    &:first-child .name
+      background-color: $light-blue
+      z-index: 2
+
+    &:hover .name
+      z-index: 3
+
+  .name
+    background-color: $dark-blue
+    font-size: .8em
+    height: 10px
+    left: 36%
+    letter-spacing: 2px
+    padding: 4px 15px 14px 40px
+    position: absolute
+    primary-type($sans, $light)
+    text-transform: uppercase
+    top: -50px
+    transition: opacity 400ms ease
+    white-space: nowrap
+    width: auto
+    z-index: 9
+
+    &.bottom
+      bottom: 17px
+      top: inherit
+
+      &:before
+        top: -16px
+        transform: rotate(180deg)
+
+    &:before
+      background: url(../_images/pin.svg) no-repeat center left transparent
+      content: ''
+      display: block
+      height: 50px
+      left: -3px
+      position: absolute
+      top: -5px
+      width: 50px
+
+    &:hover
+      color: $white
+      cursor: pointer
+
+.bios:first-child
+  display: block
+
+.bio
+  display: none
+
+  &.show
+    display: block
+
+.evans
+  left: 0
+  img
+    width: 160px
+
+.robinson
+  left: 35%
+  img
+    width: 135px
+
+.sullivan
+  left: 57%
+  img
+    width: 127px
+
+.greenup
+  left: 45%
+  img
+    width: 161px
+
+.peace
+  left: 11%
+  img
+    width: 145px
+
+.montgomery
+  left: 20%
+  img
+    width: 193px
+
+.keith
+  left: 82%
+  img
+    width: 146px
+
+.mathis
+  left: 67%
+  img
+    width: 187px
+
+
+
+
+/* ---------- staff bios ---------- */
+
+.bio
+  margin: 40px 0 0 27px
+  position: relative
+
+  &:after
+    clear: both
+    content: ''
+    display: block
+
+  &:before
+    background: url(../_images/pin.svg) no-repeat center left transparent
+    content: ''
+    display: block
+    height: 50px
+    left: -56px
+    position: absolute
+    top: -16px
+    transform: rotate(-90deg)
+    width: 50px
+
+  h4.employee
+    font-size: 0.9375em
+    primary-type($sans, $semi-bold)
+    letter-spacing: 3px
+    line-height: 1.2em
+    text-transform: uppercase
+
+  h5.title
+    font-size: 0.6875em
+    primary-type($sans, $regular)
+    letter-spacing: 1px
+    line-height: 2.182em
+    text-transform: uppercase
+
+  a
+    color: $white
+    display: block
+    font-size: 0.9375em
+    primary-type($sans, $regular)
+    line-height: 2em
+
+    &:hover
+      color: $lightest-blue
+
+    &.email
+      primary-type($sans, $bold)
+      line-height: 2em
+
+  .card
+    float: left
+    width: 32%
+
+  .story
+    float: left
+    margin-left: 3%
+    width: 65%
+
+    p
+      font-size: .9375em
+      primary-type($serif, $regular)
+      line-height: 1.6em
+      padding-bottom: 20px
+
+
+// ---------------------- perspective -----------------------
+
+#perspective
+  p.intro
+    line-height: 1.5em
+
+    &:nth-child(3)
+      margin-top: 40px
+
+
+// ---------------------- faq -----------------------
+
+p.q
+  font-size: 1.125em
+  primary-type($serif, $medium)
+  line-height: 1.333em
+  padding-top: 36px
+
+p.a
+  font-size: 1em
+  border-bottom: 1px solid rgba($white, .5)
+  primary-type($sans, $light)
+  line-height: 1.333em
+  padding: 14px 0 36px
+
+
+// ---------------------- forms -----------------------
+
+.forms
+  position: relative
+
+#resources
+
+  p.intro
+    line-height: 1.25em
+    margin-top: 75px
+
+    &:first-of-type
+      margin-top: 0
+
+a.arrow
+  color: $white
+  display: block
+  font-size: .8em
+  letter-spacing: 2px
+  margin-top: 20px
+  primary-type($sans, $light)
+  text-align: right
+  text-transform: uppercase
+  transition: color 400ms ease
+
+  &:after
+    content: "\e902"
+    font-family: 'ngu'
+    padding-left: 10px
+    transition: all 400ms ease
+
+  &:hover
+    color: $gold
+
+    &:after
+      margin-right: -10px
+      padding-left: 20px

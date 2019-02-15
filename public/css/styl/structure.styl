@@ -1,0 +1,69 @@
+
+body
+  scroll-behavior: smooth
+
+.overlay
+  background-color: $darkest
+  bottom: 0
+  position: fixed
+  top: 0
+  width: 100vw
+  z-index: -3
+
+.background-video
+  margin: 0 -11vw
+  opacity: .25
+  overflow-x: hidden
+  position: fixed
+  width: 122vw
+  z-index: -1
+
+  video
+    width: 100%
+
+.wrapper
+  height: 100vh
+  width: 100vw
+
+  .main
+    height: 100%
+
+    aside
+      height: 100vh
+      padding: $top-margin 2% 0
+      position: fixed
+      top: 0
+      width: $sidebar-width
+
+    section
+      padding-left: $sidebar-width
+
+.grid
+  margin-left: 40px
+  max-width: 930px
+
+  @media screen and (max-width: 1200px)
+  	max-width: 900px
+
+.panes
+  transition: 800ms
+
+.pane
+  height: 100vh
+  padding-top: 220px
+
+  &#intro
+    padding-top: 0
+
+  &#people
+    height: 1700px
+
+  &#faq
+    height: 2000px
+
+.flex
+  display: flex
+
+  .three
+    flex: 1
+    margin-bottom: 60px

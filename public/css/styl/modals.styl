@@ -1,0 +1,84 @@
+
+@keyframes example
+  from {opacity: 0}
+  to {opacity:1}
+
+.modal
+  display: none
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  overflow: auto
+  background-color: rgba($darkest-blue, 0.8)
+
+.modal:target
+  display: block
+  position: fixed
+
+.modal-content
+  margin: auto
+  background-color: $white
+  position: relative
+  padding: 0
+  outline: 0
+  top: 8vh
+  width: auto
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+  animation-name: example
+  animation-duration: 500ms
+
+#links .modal-content
+  max-width: 700px
+
+.closebtn
+  color: rgba($darkest-blue, .5)
+  font-size: .8em
+  letter-spacing: 3px
+  position: absolute
+  primary-type($sans, $semi-bold)
+  right: 10px
+  text-decoration: none
+  text-transform: uppercase
+  top: 10px
+
+.closebtn:hover,
+.closebtn:focus
+  color: $lightest-blue
+  text-decoration: none
+  cursor: pointer
+
+.container
+  padding:  5vw 5vw 6vw
+
+  .headline
+    color: $darkest
+    padding-bottom: 20px
+    primary-type($sans, $semi-bold)
+
+  a
+    color: $medium-blue
+    display: block
+    primary-type($sans, $light)
+    line-height: 2em
+
+    &:visited
+      color: $light-blue
+
+  .column
+    display: inline-block
+    width: 48%
+
+    &:first-child
+      margin-right: 3%
+
+
+// -------------------- forms --------------------
+
+form
+  color: $darkest
+  primary-type($sans, $semi-bold)
+
+  .error
+    color: #FF0000
