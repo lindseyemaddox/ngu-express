@@ -390,9 +390,13 @@ body {
   position: fixed;
   top: 0;
   width: 340px;
+  z-index: 999;
 }
 .wrapper .main section {
   padding-left: 340px;
+}
+.wrapper .main section:not(.forms) {
+  height: 900vh;
 }
 .grid {
   margin-left: 40px;
@@ -418,6 +422,9 @@ body {
 }
 .pane#faq {
   height: 2000px;
+}
+.pane#resources {
+  height: 80vh;
 }
 .panes:first-child {
   height: 90vh;
@@ -463,12 +470,15 @@ li a:hover {
 }
 li.active span,
 li.active a {
-  color: #f9d426;
+  color: #fff;
   opacity: 1;
 }
 li.active a:before {
-  color: #f9d426;
+  color: #fff;
   opacity: 1;
+}
+li:hover.active a:before {
+  color: #fff;
 }
 li a:hover:before {
   color: #fff;

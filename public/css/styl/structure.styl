@@ -34,9 +34,13 @@ body
       position: fixed
       top: 0
       width: $sidebar-width
+      z-index: 999
 
     section
       padding-left: $sidebar-width
+
+      &:not(.forms)
+        height: 900vh
 
 .grid
   margin-left: 40px
@@ -60,6 +64,9 @@ body
 
   &#faq
     height: 2000px
+
+  &#resources
+    height: 80vh
 
 .panes:first-child
     height: 90vh
