@@ -39,9 +39,6 @@ body
     section
       padding-left: $sidebar-width
 
-      &:not(.forms)
-        height: 900vh
-
 .grid
   margin-left: 40px
   max-width: 930px
@@ -54,22 +51,59 @@ body
 
 .pane
   height: 100vh
-  padding-top: 220px
+  padding-top: 100px
+  position: relative
 
   &#intro
     padding-top: 0
 
+  &#program
+    padding-top: 220px
+
+    .next
+      bottom: 300px
+
   &#people
-    height: 1700px
+    height: 1640px
+    padding-top: 270px
+
+  &#foundation
+    height: 75vh
+    padding-top: 270px
+
+  &#perspective
+    height: 80vh
+    padding-top: 220px
+
+    .next span
+      margin-left: -30px
 
   &#faq
-    height: 2000px
+    height: 81vh
+    padding-top: 220px
 
   &#resources
-    height: 80vh
+    height: 88vh
+    padding-top: 220px
 
-.panes:first-child
-    height: 90vh
+#morefaq
+  background-color: rgba($darkest, 0.9)
+  height: 80vh
+  left: 5%
+  top: 100px
+  width: 90%
+  z-index: 999
+
+  .modal-content
+    background-color: transparent
+    top: 0
+
+  .closebtn
+    color: $white
+
+  p.a:last-child
+    border: none
+    padding-bottom: 100px
 
 .flex
   display: flex

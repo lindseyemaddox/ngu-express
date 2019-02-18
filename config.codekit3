@@ -96,19 +96,6 @@
 		"oS": 0,
 		"rrU": 0
 		},
-	"/public/css/styl/mixins.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/public/css/styl/mixins.css",
-		"oF": 0,
-		"oS": 0,
-		"rrU": 0
-		},
 	"/public/css/styl/modals.styl": {
 		"aP": 0,
 		"bl": 0,
@@ -832,6 +819,16 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/public/scripts/bootstrap-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/public/scripts/main-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/public/scripts/main-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0

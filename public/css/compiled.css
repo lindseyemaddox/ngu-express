@@ -189,27 +189,67 @@ html {
   color: #fff;
   font-size: 16px;
 }
+@-moz-keyframes next {
+  0% {
+    opacity: 100%;
+    top: 25px;
+  }
+  100% {
+    opacity: 0;
+    top: 0;
+  }
+}
+@-webkit-keyframes next {
+  0% {
+    opacity: 100%;
+    top: 25px;
+  }
+  100% {
+    opacity: 0;
+    top: 0;
+  }
+}
+@-o-keyframes next {
+  0% {
+    opacity: 100%;
+    top: 25px;
+  }
+  100% {
+    opacity: 0;
+    top: 0;
+  }
+}
+@keyframes next {
+  0% {
+    opacity: 100%;
+    top: 25px;
+  }
+  100% {
+    opacity: 0;
+    top: 0;
+  }
+}
 @font-face {
   font-family: 'ngu';
+  font-style: normal;
+  font-weight: normal;
   src: url("/fonts/ngu.eot?mrpzwq");
   src: url("/fonts/ngu.eot?mrpzwq#iefix") format('embedded-opentype'), url("/fonts/ngu.ttf?mrpzwq") format('truetype'), url("/fonts/ngu.woff?mrpzwq") format('woff'), url("/fonts/ngu.svg?mrpzwq#ngu") format('svg');
-  font-weight: normal;
-  font-style: normal;
 }
 [class^="icon-"],
 [class*=" icon-"] {
   color: #fff;
   display: block;
   font-family: 'ngu' !important;
-  speak: none;
   font-style: normal;
-  font-weight: normal;
   font-variant: normal;
-  text-transform: none;
+  font-weight: normal;
   line-height: 1;
+  speak: none;
+  text-transform: none;
 /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 .icon-acorn:before {
   content: "\e900";
@@ -279,6 +319,7 @@ html {
   text-decoration: none;
   text-transform: uppercase;
   top: 10px;
+  z-index: 999;
 }
 .closebtn:hover,
 .closebtn:focus {
@@ -395,9 +436,6 @@ body {
 .wrapper .main section {
   padding-left: 340px;
 }
-.wrapper .main section:not(.forms) {
-  height: 900vh;
-}
 .grid {
   margin-left: 40px;
   max-width: 930px;
@@ -412,22 +450,59 @@ body {
 }
 .pane {
   height: 100vh;
-  padding-top: 220px;
+  padding-top: 100px;
+  position: relative;
 }
 .pane#intro {
   padding-top: 0;
 }
+.pane#program {
+  padding-top: 220px;
+}
+.pane#program .next {
+  bottom: 300px;
+}
 .pane#people {
-  height: 1700px;
+  height: 1640px;
+  padding-top: 270px;
+}
+.pane#foundation {
+  height: 75vh;
+  padding-top: 270px;
+}
+.pane#perspective {
+  height: 80vh;
+  padding-top: 220px;
+}
+.pane#perspective .next span {
+  margin-left: -30px;
 }
 .pane#faq {
-  height: 2000px;
+  height: 81vh;
+  padding-top: 220px;
 }
 .pane#resources {
-  height: 80vh;
+  height: 88vh;
+  padding-top: 220px;
 }
-.panes:first-child {
-  height: 90vh;
+#morefaq {
+  background-color: rgba(0,0,0,0.9);
+  height: 80vh;
+  left: 5%;
+  top: 100px;
+  width: 90%;
+  z-index: 999;
+}
+#morefaq .modal-content {
+  background-color: transparent;
+  top: 0;
+}
+#morefaq .closebtn {
+  color: #fff;
+}
+#morefaq p.a:last-child {
+  border: none;
+  padding-bottom: 100px;
 }
 .flex {
   display: flex;
@@ -840,6 +915,26 @@ a.arrow:hover {
 a.arrow:hover:after {
   margin-right: -10px;
   padding-left: 20px;
+}
+a.next {
+  bottom: 8vh;
+  color: #fff;
+  letter-spacing: 2px;
+  position: absolute;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  font-weight: 400;
+  line-height: 1.5em;
+  right: 50%;
+  text-align: center;
+  text-transform: uppercase;
+}
+a.next span {
+  animation: next 1s ease 3s infinite alternate;
+  color: #fff;
+  left: 25%;
+  position: absolute;
+  top: 15px;
+  transform: rotate(90deg);
 }
 @media screen and (max-width: 1000px) {
   .full {
