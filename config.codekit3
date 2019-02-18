@@ -841,8 +841,8 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/public/scripts/main-min.js",
-		"oF": 0,
+		"oAP": "/public/scripts/min/main-min.js",
+		"oF": 2,
 		"sC": 3,
 		"tS": 0
 		},
@@ -943,6 +943,13 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/views/contact-failure.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/views/contact-failure.html",
+		"oF": 0
+		},
 	"/views/contact-failure.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -951,6 +958,13 @@
 		"oAP": "/views/contact-failure.html",
 		"oF": 0,
 		"oS": 0
+		},
+	"/views/contact-success.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/views/contact-success.html",
+		"oF": 0
 		},
 	"/views/contact-success.pug": {
 		"cB": 0,

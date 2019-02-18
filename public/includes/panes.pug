@@ -89,17 +89,17 @@
       h3.headline Our employees are a family who care for one another and for our customers. Each one of our people is dedicated to serving the risk management needs of our customers and treating them with the care they deserve.
       .staff
         each person in people
-          a(data-name=`${person.lastname}`)(className=`${person.lastname}`)
+          a(data-name=`${person.lastname}` class=`${person.lastname}`)
             img(alt=`${person.firstname} ${person.lastname}` src=`/images/${person.imgSrc}`)
             .name #{person.firstname} #{person.lastname}
 
-        //- a.keith(data-name='keith')
-        //-   img(src='_images/ruby-keith.png' alt='Ruby Keith')
-        //-   .name.bottom Ruby Keith
+        a.keith(data-name='keith')
+          img(src='_images/ruby-keith.png' alt='Ruby Keith')
+          .name.bottom Ruby Keith
           
       .bios
         each person in people
-          .bio(data-name=`#{person.lastname}`)(id=`#{person.lastname}`)
+          .bio(data-name=`${person.lastname}` id=`${person.lastname}`)
             .card
               h4.employee #{person.firstname} #{person.lastname}
               h5.title #{person.title}
@@ -108,7 +108,7 @@
               a fax: (615) 824-1980
 
             .story
-              p(id=`#{$person.bio}`)
+              p(id=`${person.lastname}`) #{person.bio}
           
     .pane#foundation
       

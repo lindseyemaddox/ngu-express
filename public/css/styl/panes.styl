@@ -91,24 +91,31 @@ ul.reg li
     transition: filter 400ms ease
     z-index: 0
 
-  & > a
+  & a
     bottom: 0
     color: $white
     position: absolute
 
-    &:hover,
-    &.selected,
     &:first-child
+      filter: grayscale(0)
+      z-index: 1
+
+    &:hover,
+    &.selected
       img
         filter: grayscale(0)
+        // z-index: 2
 
       .name
         opacity: 1
 
-    &.selected .name,
-    &:first-child .name
+    &.selected .name
       background-color: $light-blue
       z-index: 2
+
+    &:first-child .name
+      // background-color: $light-blue
+      // z-index: 2
 
     &:hover .name
       z-index: 3
@@ -138,7 +145,7 @@ ul.reg li
         transform: rotate(180deg)
 
     &:before
-      background: url(../_images/pin.svg) no-repeat center left transparent
+      background: url(/images/pin.svg) no-repeat center left transparent
       content: ''
       display: block
       height: 50px
@@ -160,42 +167,46 @@ ul.reg li
   &.show
     display: block
 
-.evans
+.Evans
   left: 0
   img
     width: 160px
 
-.robinson
+.Robinson
   left: 35%
   img
     width: 135px
+    z-index: 999
 
-.sullivan
+.Sullivan
   left: 57%
   img
     width: 127px
+    z-index: 999
 
-.greenup
+.Greenup
   left: 45%
   img
     width: 161px
 
-.peace
+.Peace
   left: 11%
   img
     width: 145px
+    z-index: 999
 
-.montgomery
+.Montgomery
   left: 20%
   img
     width: 193px
 
-.keith
+.Keith
   left: 82%
   img
     width: 146px
+    z-index: 999
 
-.mathis
+.Mathis
   left: 67%
   img
     width: 187px
@@ -215,7 +226,7 @@ ul.reg li
     display: block
 
   &:before
-    background: url(../_images/pin.svg) no-repeat center left transparent
+    background: url(/images/pin.svg) no-repeat center left transparent
     content: ''
     display: block
     height: 50px

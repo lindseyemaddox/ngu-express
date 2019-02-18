@@ -584,27 +584,28 @@ ul.reg li {
   transition: filter 400ms ease;
   z-index: 0;
 }
-.staff > a {
+.staff a {
   bottom: 0;
   color: #fff;
   position: absolute;
 }
-.staff > a:hover img,
-.staff > a.selected img,
-.staff > a:first-child img {
+.staff a:first-child {
+  filter: grayscale(0);
+  z-index: 1;
+}
+.staff a:hover img,
+.staff a.selected img {
   filter: grayscale(0);
 }
-.staff > a:hover .name,
-.staff > a.selected .name,
-.staff > a:first-child .name {
+.staff a:hover .name,
+.staff a.selected .name {
   opacity: 1;
 }
-.staff > a.selected .name,
-.staff > a:first-child .name {
+.staff a.selected .name {
   background-color: #1778e5;
   z-index: 2;
 }
-.staff > a:hover .name {
+.staff a:hover .name {
   z-index: 3;
 }
 .staff .name {
@@ -634,7 +635,7 @@ ul.reg li {
   transform: rotate(180deg);
 }
 .staff .name:before {
-  background: url("../_images/pin.svg") no-repeat center left transparent;
+  background: url("/images/pin.svg") no-repeat center left transparent;
   content: '';
   display: block;
   height: 50px;
@@ -656,52 +657,56 @@ ul.reg li {
 .bio.show {
   display: block;
 }
-.evans {
+.Evans {
   left: 0;
 }
-.evans img {
+.Evans img {
   width: 160px;
 }
-.robinson {
+.Robinson {
   left: 35%;
 }
-.robinson img {
+.Robinson img {
   width: 135px;
+  z-index: 999;
 }
-.sullivan {
+.Sullivan {
   left: 57%;
 }
-.sullivan img {
+.Sullivan img {
   width: 127px;
+  z-index: 999;
 }
-.greenup {
+.Greenup {
   left: 45%;
 }
-.greenup img {
+.Greenup img {
   width: 161px;
 }
-.peace {
+.Peace {
   left: 11%;
 }
-.peace img {
+.Peace img {
   width: 145px;
+  z-index: 999;
 }
-.montgomery {
+.Montgomery {
   left: 20%;
 }
-.montgomery img {
+.Montgomery img {
   width: 193px;
 }
-.keith {
+.Keith {
   left: 82%;
 }
-.keith img {
+.Keith img {
   width: 146px;
+  z-index: 999;
 }
-.mathis {
+.Mathis {
   left: 67%;
 }
-.mathis img {
+.Mathis img {
   width: 187px;
 }
 .bio {
@@ -714,7 +719,7 @@ ul.reg li {
   display: block;
 }
 .bio:before {
-  background: url("../_images/pin.svg") no-repeat center left transparent;
+  background: url("/images/pin.svg") no-repeat center left transparent;
   content: '';
   display: block;
   height: 50px;
