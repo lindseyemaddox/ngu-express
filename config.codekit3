@@ -823,16 +823,6 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/public/scripts/main-min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/public/scripts/main-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/public/scripts/main.js": {
 		"ft": 64,
 		"ma": 0,
