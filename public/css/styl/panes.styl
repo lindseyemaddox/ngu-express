@@ -100,11 +100,9 @@ ul.reg li
       filter: grayscale(0)
       z-index: 1
 
-    &:hover,
-    &.selected
+    &:hover
       img
         filter: grayscale(0)
-        // z-index: 2
 
       .name
         opacity: 1
@@ -113,9 +111,12 @@ ul.reg li
       background-color: $light-blue
       z-index: 2
 
+    &.selected img
+      z-index: 2
+
     &:first-child .name
-      // background-color: $light-blue
-      // z-index: 2
+      background-color: $light-blue
+      z-index: 2
 
     &:hover .name
       z-index: 3
@@ -158,7 +159,7 @@ ul.reg li
       color: $white
       cursor: pointer
 
-.bios:first-child
+.bio:first-child
   display: block
 
 .bio
@@ -167,46 +168,42 @@ ul.reg li
   &.show
     display: block
 
-.Evans
+.evans
   left: 0
   img
     width: 160px
 
-.Robinson
+.robinson
   left: 35%
   img
     width: 135px
-    z-index: 999
 
-.Sullivan
+.sullivan
   left: 57%
   img
     width: 127px
-    z-index: 999
 
-.Greenup
+.greenup
   left: 45%
   img
     width: 161px
 
-.Peace
+.peace
   left: 11%
   img
     width: 145px
-    z-index: 999
 
-.Montgomery
+.montgomery
   left: 20%
   img
     width: 193px
 
-.Keith
+.keith
   left: 82%
   img
     width: 146px
-    z-index: 999
 
-.Mathis
+.mathis
   left: 67%
   img
     width: 187px
@@ -261,8 +258,11 @@ ul.reg li
       color: $lightest-blue
 
     &.email
-      primary-type($sans, $bold)
+      font-size: .8em
+      letter-spacing: 2px
+      primary-type($sans, $regular)
       line-height: 2em
+      text-transform: uppercase
 
   .card
     float: left

@@ -92,32 +92,37 @@
       
     .pane#people
       
+
       a.next(href='#foundation') Our Foundation
         span.icon-arrow
 
       h3.headline Our employees are a family who care for one another and for our customers. Each one of our people is dedicated to serving the risk management needs of our customers and treating them with the care they deserve.
-      .staff
-        each person in people
-          a(data-name=`${person.lastname}` class=`${person.lastname}`)
-            img(alt=`${person.firstname} ${person.lastname}` src=`/images/${person.imgSrc}`)
-            .name #{person.firstname} #{person.lastname}
 
-        a.keith(data-name='keith')
-          img(src='_images/ruby-keith.png' alt='Ruby Keith')
-          .name.bottom Ruby Keith
-          
-      .bios
-        each person in people
-          .bio(data-name=`${person.lastname}` id=`${person.lastname}`)
-            .card
-              h4.employee #{person.firstname} #{person.lastname}
-              h5.title #{person.title}
-              a.email(href="mailto:${person.email}") #{person.email}
-              a(href='tel:16158225454') phone: (615) 822-5454
-              a fax: (615) 824-1980
+      include ../../views/profile
 
-            .story
-              p(id=`${person.lastname}`) #{person.bio}
+
+      //- .staff
+      //-   each person in people
+      //-     a(data-name=`${person.lastname}` class=`${person.lastname}`)
+      //-       img(alt=`${person.firstname} ${person.lastname}` src=`/images/${person.imgSrc}`)
+      //-       .name #{person.firstname} #{person.lastname}
+      //- 
+      //-   a.keith(data-name='keith')
+      //-     img(src='_images/ruby-keith.png' alt='Ruby Keith')
+      //-     .name.bottom Ruby Keith
+      //- 
+      //- .bios
+      //-   each person in people
+      //-     .bio(data-name=`${person.lastname}` id=`${person.lastname}`)
+      //-       .card
+      //-         h4.employee #{person.firstname} #{person.lastname}
+      //-         h5.title #{person.title}
+      //-         a.email(href="mailto:${person.email}") #{person.email}
+      //-         a(href='tel:16158225454') phone: (615) 822-5454
+      //-         a fax: (615) 824-1980
+      //- 
+      //-       .story
+      //-         p(id=`${person.lastname}`) #{person.bio}
           
     .pane#foundation
       

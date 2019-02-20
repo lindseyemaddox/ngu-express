@@ -464,7 +464,7 @@ body {
 }
 .pane#people {
   height: 76vh;
-  padding-top: 270px;
+  padding-top: 220px;
 }
 .pane#foundation {
   height: 75vh;
@@ -668,15 +668,20 @@ ul.reg li {
   filter: grayscale(0);
   z-index: 1;
 }
-.staff a:hover img,
-.staff a.selected img {
+.staff a:hover img {
   filter: grayscale(0);
 }
-.staff a:hover .name,
-.staff a.selected .name {
+.staff a:hover .name {
   opacity: 1;
 }
 .staff a.selected .name {
+  background-color: #1778e5;
+  z-index: 2;
+}
+.staff a.selected img {
+  z-index: 2;
+}
+.staff a:first-child .name {
   background-color: #1778e5;
   z-index: 2;
 }
@@ -723,7 +728,7 @@ ul.reg li {
   color: #fff;
   cursor: pointer;
 }
-.bios:first-child {
+.bio:first-child {
   display: block;
 }
 .bio {
@@ -732,56 +737,52 @@ ul.reg li {
 .bio.show {
   display: block;
 }
-.Evans {
+.evans {
   left: 0;
 }
-.Evans img {
+.evans img {
   width: 160px;
 }
-.Robinson {
+.robinson {
   left: 35%;
 }
-.Robinson img {
+.robinson img {
   width: 135px;
-  z-index: 999;
 }
-.Sullivan {
+.sullivan {
   left: 57%;
 }
-.Sullivan img {
+.sullivan img {
   width: 127px;
-  z-index: 999;
 }
-.Greenup {
+.greenup {
   left: 45%;
 }
-.Greenup img {
+.greenup img {
   width: 161px;
 }
-.Peace {
+.peace {
   left: 11%;
 }
-.Peace img {
+.peace img {
   width: 145px;
-  z-index: 999;
 }
-.Montgomery {
+.montgomery {
   left: 20%;
 }
-.Montgomery img {
+.montgomery img {
   width: 193px;
 }
-.Keith {
+.keith {
   left: 82%;
 }
-.Keith img {
+.keith img {
   width: 146px;
-  z-index: 999;
 }
-.Mathis {
+.mathis {
   left: 67%;
 }
-.Mathis img {
+.mathis img {
   width: 187px;
 }
 .bio {
@@ -835,10 +836,13 @@ ul.reg li {
   color: #1a86ff;
 }
 .bio a.email {
+  font-size: 0.8em;
+  letter-spacing: 2px;
   font-family: 'Raleway', 'Arial', sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.5em;
   line-height: 2em;
+  text-transform: uppercase;
 }
 .bio .card {
   float: left;
