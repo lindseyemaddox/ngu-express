@@ -189,6 +189,9 @@ html {
   color: #fff;
   font-size: 16px;
 }
+.nowrap {
+  white-space: nowrap;
+}
 @-moz-keyframes next {
   0% {
     opacity: 100%;
@@ -450,40 +453,17 @@ body {
 }
 .pane {
   height: 100vh;
-  padding-top: 100px;
+  padding-top: 220px;
   position: relative;
+}
+.pane .next {
+  bottom: 300px;
 }
 .pane#intro {
   padding-top: 0;
 }
-.pane#program {
-  padding-top: 220px;
-}
-.pane#program .next {
-  bottom: 300px;
-}
-.pane#people {
-  height: 76vh;
-  padding-top: 220px;
-}
-.pane#foundation {
-  height: 75vh;
-  padding-top: 270px;
-}
-.pane#perspective {
-  height: 80vh;
-  padding-top: 220px;
-}
-.pane#perspective .next span {
-  margin-left: -30px;
-}
-.pane#faq {
-  height: 81vh;
-  padding-top: 220px;
-}
-.pane#resources {
-  height: 88vh;
-  padding-top: 220px;
+.pane#intro .next {
+  bottom: 8vh;
 }
 #morefaq {
   background-color: rgba(0,0,0,0.9);
@@ -676,9 +656,6 @@ ul.reg li {
 }
 .staff a.selected .name {
   background-color: #1778e5;
-  z-index: 2;
-}
-.staff a.selected img {
   z-index: 2;
 }
 .staff a:first-child .name {
