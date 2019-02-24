@@ -324,8 +324,8 @@ html {
   padding-bottom: 10vh;
 }
 .closebtn {
-  color: rgba(6,34,64,0.5);
-  font-size: 0.8em;
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
   letter-spacing: 3px;
   position: absolute;
   font-family: 'Raleway', 'Arial', sans-serif;
@@ -337,32 +337,18 @@ html {
   top: 20px;
   z-index: 999;
 }
-.closebtn:hover,
-.closebtn:focus {
-  color: #1a86ff;
+.closebtn:hover {
+  color: #f9d426;
   text-decoration: none;
   cursor: pointer;
 }
-.container {
-  width: 100%;
-}
 .container .headline {
-  color: #000;
+  color: #fff;
+  font-size: 1.3em;
   padding-bottom: 20px;
   font-family: 'Raleway', 'Arial', sans-serif;
   font-weight: 600;
   line-height: 1.5em;
-}
-.container a {
-  color: #0d437f;
-  display: block;
-  font-family: 'Raleway', 'Arial', sans-serif;
-  font-weight: 300;
-  line-height: 1.5em;
-  line-height: 2em;
-}
-.container a:visited {
-  color: #1778e5;
 }
 .container .column {
   display: inline-block;
@@ -370,6 +356,31 @@ html {
 }
 .container .column:first-child {
   margin-right: 3%;
+}
+.container p {
+  color: #fff;
+  font-size: 0.8em;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  font-weight: 600;
+  line-height: 1.5em;
+  text-transform: none;
+}
+#links a {
+  color: #fff;
+  display: block;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  line-height: 2em;
+}
+#links a:hover {
+  color: #1778e5;
+}
+#links a.closebtn {
+  color: rgba(255,255,255,0.7);
+}
+#links a.closebtn:hover {
+  color: #f9d426;
 }
 #morefaq,
 .bio .modal {
@@ -390,7 +401,7 @@ html {
 }
 #morefaq .closebtn,
 .bio .modal .closebtn {
-  color: #fff;
+  color: rgba(255,255,255,0.7);
 }
 #morefaq p.a:last-child,
 .bio .modal p.a:last-child {
@@ -404,6 +415,32 @@ html {
 .bio .modal .modal-content {
   max-width: 400px;
 }
+.modal {
+  background-color: rgba(0,0,0,0.9);
+}
+.modal .modal-content {
+  background-color: transparent;
+  border: 1px solid #fff;
+  max-width: 400px;
+}
+.modal .container {
+  padding: 70px 30px 40px;
+}
+.portal {
+  color: #fff;
+  font-size: 0.7em;
+  letter-spacing: 2px;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  font-weight: 600;
+  line-height: 1.5em;
+  text-transform: uppercase;
+}
+.portal a {
+  display: inline;
+}
+.portal a:hover {
+  color: #f9d426;
+}
 #contact,
 #claim {
   background-color: rgba(0,0,0,0.9);
@@ -412,15 +449,7 @@ html {
 #claim .modal-content {
   background-color: transparent;
   border: 1px solid #fff;
-  max-width: 300px;
-}
-#contact .modal-content .closebtn,
-#claim .modal-content .closebtn {
-  color: #fff;
-}
-#contact .modal-content .closebtn:hover,
-#claim .modal-content .closebtn:hover {
-  color: #f9d426;
+  max-width: 400px;
 }
 #claim .modal-content {
   max-width: 400px;
@@ -438,32 +467,26 @@ html {
 form,
 #claim .container {
   color: #fff;
-  font-size: 0.7em;
   letter-spacing: 4px;
   margin: 0 auto;
   font-family: 'Raleway', 'Arial', sans-serif;
   font-weight: 600;
   line-height: 1.5em;
   text-transform: uppercase;
-  width: 80%;
 }
 form h4,
 #claim .container h4 {
-  font-size: 1.3em;
+  font-size: 1em;
 }
 form p.data,
 #claim .container p.data {
-  font-size: 1.5em;
-}
-form h3.headline,
-#claim .container h3.headline {
-  color: #fff;
-  padding: 40px 0 20px;
+  font-size: 0.9em;
 }
 form input,
 #claim .container input,
 form p,
 #claim .container p {
+  font-size: 0.8em;
   margin: 4px 0 20px;
   width: 100%;
 }
@@ -490,14 +513,16 @@ form a,
 }
 form a:hover,
 #claim .container a:hover {
-  text-decoration: underline;
+  color: #f9d426;
 }
 form a.closebtn,
 #claim .container a.closebtn {
-  color: #fff;
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
 }
 form a.closebtn:hover,
 #claim .container a.closebtn:hover {
+  color: #f9d426;
   text-decoration: none;
 }
 form button,
@@ -509,7 +534,6 @@ form .login,
   color: #fff;
   display: block;
   letter-spacing: 4px;
-  margin: 4px 0 30px;
   padding: 10px 0;
   text-align: center;
   text-transform: uppercase;

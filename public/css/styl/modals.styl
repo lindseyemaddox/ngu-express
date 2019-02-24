@@ -48,8 +48,8 @@
       padding-bottom: 10vh
 
 .closebtn
-  color: rgba($darkest-blue, .5)
-  font-size: .8em
+  color: rgba($white, .7)
+  font-size: 12px
   letter-spacing: 3px
   position: absolute
   primary-type($sans, $semi-bold)
@@ -59,28 +59,18 @@
   top: 20px
   z-index: 999
 
-.closebtn:hover,
-.closebtn:focus
-  color: $lightest-blue
+.closebtn:hover
+  color: $gold
   text-decoration: none
   cursor: pointer
 
 .container
-  width: 100%
 
   .headline
-    color: $darkest
+    color: $white
+    font-size: 1.3em
     padding-bottom: 20px
     primary-type($sans, $semi-bold)
-
-  a
-    color: $medium-blue
-    display: block
-    primary-type($sans, $light)
-    line-height: 2em
-
-    &:visited
-      color: $light-blue
 
   .column
     display: inline-block
@@ -89,6 +79,31 @@
     &:first-child
       margin-right: 3%
 
+  p
+    color: $white
+    font-size: .8em
+    primary-type($sans, $semi-bold)
+    text-transform: none
+
+
+#links
+  a
+    color: $white
+    display: block
+    primary-type($sans, $light)
+    line-height: 2em
+
+    &:hover
+      color: $light-blue
+
+    // &:visited
+    //   color: $medium-blue
+
+  a.closebtn
+    color: rgba($white, .7)
+
+    &:hover
+      color: $gold
 
 #morefaq, .bio .modal
   background-color: rgba($darkest, 0.9)
@@ -106,7 +121,7 @@
     width: 80vw
 
   .closebtn
-    color: $white
+    color: rgba($white, .7)
 
   p.a:last-child
     border: none
@@ -120,19 +135,37 @@
 
 // -------------------- forms --------------------
 
-#contact, #claim
+.modal
   background-color: rgba($darkest, .9)
 
   .modal-content
     background-color: transparent
     border: 1px solid $white
-    max-width: 300px
+    max-width: 400px
 
-    .closebtn
-      color: $white
+  .container
+    padding: 70px 30px 40px
 
-      &:hover
-        color: $gold
+.portal
+  color: $white
+  font-size: .7em
+  letter-spacing: 2px
+  primary-type($sans, $semi-bold)
+  text-transform: uppercase
+
+  a
+    display: inline
+
+    &:hover
+      color: $gold
+
+ #contact, #claim
+  background-color: rgba($darkest, .9)
+
+  .modal-content
+    background-color: transparent
+    border: 1px solid $white
+    max-width: 400px
 
 #claim .modal-content
   max-width: 400px
@@ -147,24 +180,19 @@
 
 form, #claim .container
   color: $white
-  font-size: .7em
   letter-spacing: 4px
   margin: 0 auto
   primary-type($sans, $semi-bold)
   text-transform: uppercase
-  width: 80%
 
   h4
-    font-size: 1.3em
+    font-size: 1em
 
   p.data
-    font-size: 1.5em
-
-  h3.headline
-    color: $white
-    padding: 40px 0 20px
+    font-size: .9em
 
   input, p
+    font-size: .8em
     margin: 4px 0 20px
     width: 100%
 
@@ -185,12 +213,14 @@ form, #claim .container
     transition: all 400ms ease
 
     &:hover
-      text-decoration: underline
+      color: $gold
 
   a.closebtn
-    color: $white
+    color: rgba($white, .7)
+    font-size: 12px
 
     &:hover
+      color: $gold
       text-decoration: none
 
   button, .login
@@ -199,7 +229,6 @@ form, #claim .container
     color: $white
     display: block
     letter-spacing: 4px
-    margin: 4px 0 30px
     padding: 10px 0
     text-align: center
     text-transform: uppercase
