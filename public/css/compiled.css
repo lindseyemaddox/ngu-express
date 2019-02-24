@@ -294,6 +294,7 @@ html {
 .modal:target {
   display: block;
   position: fixed;
+  z-index: 999;
 }
 .modal-content {
   margin: auto;
@@ -310,6 +311,18 @@ html {
 #links .modal-content {
   max-width: 700px;
 }
+.bio .modal-content p {
+  font-size: 0.9375em;
+  font-family: 'Vollkorn', 'Arial', sans-serif;
+  font-weight: 400;
+  line-height: 1.5em;
+  line-height: 1.6em;
+  padding-bottom: 20px;
+}
+.bio .modal-content a.arrow {
+  color: #fff;
+  padding-bottom: 10vh;
+}
 .closebtn {
   color: rgba(6,34,64,0.5);
   font-size: 0.8em;
@@ -318,10 +331,10 @@ html {
   font-family: 'Raleway', 'Arial', sans-serif;
   font-weight: 600;
   line-height: 1.5em;
-  right: 10px;
+  right: 20px;
   text-decoration: none;
   text-transform: uppercase;
-  top: 10px;
+  top: 20px;
   z-index: 999;
 }
 .closebtn:hover,
@@ -331,7 +344,7 @@ html {
   cursor: pointer;
 }
 .container {
-  padding: 5vw 5vw 6vw;
+  width: 100%;
 }
 .container .headline {
   color: #000;
@@ -357,6 +370,35 @@ html {
 }
 .container .column:first-child {
   margin-right: 3%;
+}
+#morefaq,
+.bio .modal {
+  background-color: rgba(0,0,0,0.9);
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+#morefaq .modal-content,
+.bio .modal .modal-content {
+  background-color: transparent;
+  bottom: 10vh;
+  max-width: 900px;
+  top: 10vh;
+  width: 80vw;
+}
+#morefaq .closebtn,
+.bio .modal .closebtn {
+  color: #fff;
+}
+#morefaq p.a:last-child,
+.bio .modal p.a:last-child {
+  border: none;
+  padding-bottom: 100px;
+}
+.bio .modal .modal-content {
+  max-width: 400px;
 }
 form {
   color: #000;
@@ -464,25 +506,6 @@ body {
 }
 .pane#intro .next {
   bottom: 8vh;
-}
-#morefaq {
-  background-color: rgba(0,0,0,0.9);
-  height: 80vh;
-  left: 5%;
-  top: 100px;
-  width: 90%;
-  z-index: 999;
-}
-#morefaq .modal-content {
-  background-color: transparent;
-  top: 0;
-}
-#morefaq .closebtn {
-  color: #fff;
-}
-#morefaq p.a:last-child {
-  border: none;
-  padding-bottom: 100px;
 }
 .flex {
   display: flex;
@@ -656,6 +679,7 @@ ul.reg li {
 }
 .staff a.selected .name {
   background-color: #1778e5;
+  opacity: 1;
   z-index: 2;
 }
 .staff a:first-child .name {

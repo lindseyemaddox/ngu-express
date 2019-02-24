@@ -16,6 +16,7 @@
 .modal:target
   display: block
   position: fixed
+  z-index: 999
 
 .modal-content
   margin: auto
@@ -32,16 +33,30 @@
 #links .modal-content
   max-width: 700px
 
+.bio
+  .modal-content
+    // max-width: 500px
+
+    p
+      font-size: .9375em
+      primary-type($serif, $regular)
+      line-height: 1.6em
+      padding-bottom: 20px
+
+    a.arrow
+      color: $white
+      padding-bottom: 10vh
+
 .closebtn
   color: rgba($darkest-blue, .5)
   font-size: .8em
   letter-spacing: 3px
   position: absolute
   primary-type($sans, $semi-bold)
-  right: 10px
+  right: 20px
   text-decoration: none
   text-transform: uppercase
-  top: 10px
+  top: 20px
   z-index: 999
 
 .closebtn:hover,
@@ -51,7 +66,7 @@
   cursor: pointer
 
 .container
-  padding:  5vw 5vw 6vw
+  width: 100%
 
   .headline
     color: $darkest
@@ -74,6 +89,31 @@
     &:first-child
       margin-right: 3%
 
+
+#morefaq, .bio .modal
+  background-color: rgba($darkest, 0.9)
+  height: 100%
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 999
+
+  .modal-content
+    background-color: transparent
+    bottom: 10vh
+    max-width: 900px
+    top: 10vh
+    width: 80vw
+
+  .closebtn
+    color: $white
+
+  p.a:last-child
+    border: none
+    padding-bottom: 100px
+
+.bio .modal .modal-content
+  max-width: 400px
 
 // -------------------- forms --------------------
 
