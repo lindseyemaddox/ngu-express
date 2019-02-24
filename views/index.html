@@ -316,7 +316,7 @@
               <div class="panes">
                 <div class="pane" id="resources">
                   <p class="intro">If we can help you with your risk management needs or you have questions about what we can do for you, please don’t hesitate to <a href="tel:16158225454">give us a call </a>or complete the online contact form linked below.</p><a class="arrow" href="#contact">Contact NGU</a>
-                  <p class="intro">If you have experienced an event which you feel requires a claim on your policy, please complete the form linked below and we will be more than happy to walk you through everything and resolve your issue.</p><a class="arrow" href="https://my.marshclearsight.com/hydra_customlogin" target="_blank">File a Claim</a>
+                  <p class="intro">If you have experienced an event which you feel requires a claim on your policy, please complete the form linked below and we will be more than happy to walk you through everything and resolve your issue.</p><a class="arrow" href="#claim">File a Claim</a>
                   <p class="intro">To request a Certificate of Insurance or an Endorsement from the Tennessee Risk Management Trust, you can complete the forms linked below.</p><a class="arrow" href="#certificate">Certificate of Insurance Request Form</a><a class="arrow" href="#property">Add or Remove Property</a><a class="arrow" href="#vehicle">Add or Remove Vehicle</a><a class="arrow" href="#risk">Builders Risk Coverage Application</a>
                   <p class="intro">Links to information and services that benefit our clients. Please let us know if there is any other information you feel would be helpful to see here.</p><a class="arrow" href="#links">Helpful Links</a>
                   <div class="modal" id="contact">
@@ -334,6 +334,18 @@
                             <button type="submit">Submit</button>
                           </fieldset>
                         </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal" id="claim">
+                    <div class="modal-content">
+                      <div class="container"><a class="closebtn" href="#resources">close</a>
+                        <h3 class="headline">File A Claim</h3>
+                        <h4>Our New Reporting System requires authentication. <a href="http://www.tnrmt.com/news/IntakeInstructions.pdf" target="_blank">Detailed instructions </a></h4>
+                        <p class="data">Username: <span>info@tnrmt.com</span></p>
+                        <p class="data">Password: <span>Welcome1!</span></p>
+                        <p>Please forward all Property / Casualty claims documentation to <a href="mailto:pcclaims@sectn.com" subject="New Property/Casualyy Claim Filed at ngutn.com">pcclaims@sectn.com</a></p>
+                        <p>Please forward all Workers' Compensation claims documentation to <a href="mailto:wcclaims@sectn.com" subject="New Workers' Comp Claim Filed at ngutn.com">wcclaims@sectn.com</a></p><a class="login" href="https://my.marshclearsight.com/hydra_customlogin" target="_blank">Log In</a>
                       </div>
                     </div>
                   </div>
@@ -365,7 +377,25 @@
                     <div class="modal-content">
                       <div class="container"><a class="closebtn" href="#resources">close</a>
                         <h3 class="headline">Certificate of Insurance Request Form</h3>
-                        <p>Some text in the modal.</p>
+                        <p>Please use this form to request a Certificate of Insurance (COI) on your policy.</p>
+                        <form action="contact" id="contact-form" method="post" role="form">
+                          <fieldset>
+                            <label for="coi-name">Entity Name &#42;</label>
+                            <input id="coi-name" name="coi-name" type="text" placeholder="Acme School District" required="required">
+                            <label for="coi-agent">Agent &#42;</label>
+                            <input id="coi-agent" name="coi-agent" type="text" placeholder="John Johnson">
+                            <label for="coi-radio">Entity Type</label>
+                            <div class="radios">
+                              <label for="coi-school-district">School District</label>
+                              <input id="coi-school-district" type="text" placeholder="first and last" name="coi-school-district">
+                              <label for="coi-school-district">All Other Governmental Entities</label>
+                              <input id="coi-school-district" type="text" placeholder="first and last" name="coi-school-district">
+                            </div>
+                            <label for="message">Message &#42;</label>
+                            <textarea id="message" name="message" placeholder="Enter your message here" rows="3" required="required"></textarea>
+                            <button type="submit">Submit</button>
+                          </fieldset>
+                        </form>
                       </div>
                     </div>
                   </div>

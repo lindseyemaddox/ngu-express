@@ -112,14 +112,100 @@
     border: none
     padding-bottom: 100px
 
+  a.arrow
+    padding-bottom: 10vh
+
 .bio .modal .modal-content
   max-width: 400px
 
 // -------------------- forms --------------------
 
-form
-  color: $darkest
+#contact, #claim
+  background-color: rgba($darkest, .9)
+
+  .modal-content
+    background-color: transparent
+    border: 1px solid $white
+    max-width: 300px
+
+    .closebtn
+      color: $white
+
+      &:hover
+        color: $gold
+
+#claim .modal-content
+  max-width: 400px
+
+  p, h4
+    letter-spacing: 2px
+    margin-bottom: 20px
+
+    span
+      color: $light-blue
+      text-transform: uppercase
+
+form, #claim .container
+  color: $white
+  font-size: .7em
+  letter-spacing: 4px
+  margin: 0 auto
   primary-type($sans, $semi-bold)
+  text-transform: uppercase
+  width: 80%
+
+  h4
+    font-size: 1.3em
+
+  p.data
+    font-size: 1.5em
+
+  h3.headline
+    color: $white
+    padding: 40px 0 20px
+
+  input, p
+    margin: 4px 0 20px
+    width: 100%
+
+  textarea
+    height: 100px
+    margin-bottom: 20px
+    width: 100%
 
   .error
     color: #FF0000
+
+  a
+    color: $light-blue
+    cursor: pointer
+    display: inline
+    primary-type($sans, $bold)
+    text-transform: uppercase
+    transition: all 400ms ease
+
+    &:hover
+      text-decoration: underline
+
+  a.closebtn
+    color: $white
+
+    &:hover
+      text-decoration: none
+
+  button, .login
+    background-color: transparent
+    border: 1px solid $white
+    color: $white
+    display: block
+    letter-spacing: 4px
+    margin: 4px 0 30px
+    padding: 10px 0
+    text-align: center
+    text-transform: uppercase
+    width: 100%
+
+    &:hover
+      background-color: $light-blue
+      border: none
+      text-decoration: none

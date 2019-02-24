@@ -11,7 +11,7 @@
       a.arrow(href='#contact') Contact NGU
 
       p.intro If you have experienced an event which you feel requires a claim on your policy, please complete the form linked below and we will be more than happy to walk you through everything and resolve your issue.
-      a.arrow(href='https://my.marshclearsight.com/hydra_customlogin' target='_blank') File a Claim
+      a.arrow(href='#claim') File a Claim
 
       p.intro To request a Certificate of Insurance or an Endorsement from the Tennessee Risk Management Trust, you can complete the forms linked below.
       a.arrow(href='#certificate') Certificate of Insurance Request Form
@@ -36,6 +36,24 @@
                 label(for="message") Message &#42;
                 textarea(id="message" name="message" placeholder="Enter your message here" rows="3" required="required")
                 button(type="submit") Submit
+
+      #claim.modal
+        .modal-content
+          .container
+            a.closebtn(href="#resources") close
+            h3.headline File A Claim
+            h4 Our New Reporting System requires authentication. 
+              a(href="http://www.tnrmt.com/news/IntakeInstructions.pdf" target="_blank") Detailed instructions 
+            p.data Username: 
+              span info@tnrmt.com
+            p.data Password: 
+              span Welcome1!
+            p Please forward all Property / Casualty claims documentation to 
+              a(href="mailto:pcclaims@sectn.com" subject="New Property/Casualyy Claim Filed at ngutn.com") pcclaims@sectn.com
+            p Please forward all Workers' Compensation claims documentation to 
+              a(href="mailto:wcclaims@sectn.com" subject="New Workers' Comp Claim Filed at ngutn.com") wcclaims@sectn.com
+            a.login(href="https://my.marshclearsight.com/hydra_customlogin" target="_blank") Log In
+              
 
       #risk.modal
         .modal-content
@@ -63,7 +81,23 @@
           .container
             a.closebtn(href="#resources") close
             h3.headline Certificate of Insurance Request Form
-            p Some text in the modal.
+            p Please use this form to request a Certificate of Insurance (COI) on your policy.
+            form(action="contact" id="contact-form" method="post" role="form")
+              fieldset
+                label(for="coi-name") Entity Name &#42;
+                input#coi-name(name="coi-name" type="text" placeholder="Acme School District" required="required")
+                label(for="coi-agent") Agent &#42;
+                input#coi-agent(name="coi-agent" type="text" placeholder="John Johnson")
+                label(for="coi-radio") Entity Type
+                .radios
+                  label(for='coi-school-district') School District
+                  input#coi-school-district(type='text' placeholder='first and last' name='coi-school-district')                
+                  label(for='coi-school-district') All Other Governmental Entities
+                  input#coi-school-district(type='text' placeholder='first and last' name='coi-school-district')                
+                
+                label(for="message") Message &#42;
+                textarea(id="message" name="message" placeholder="Enter your message here" rows="3" required="required")
+                button(type="submit") Submit
 
       #links.modal
         .modal-content
