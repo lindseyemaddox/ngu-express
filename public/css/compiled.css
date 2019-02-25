@@ -236,8 +236,8 @@ html {
   font-family: 'ngu';
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/ngu.eot?mrpzwq");
-  src: url("/fonts/ngu.eot?mrpzwq#iefix") format('embedded-opentype'), url("/fonts/ngu.ttf?mrpzwq") format('truetype'), url("/fonts/ngu.woff?mrpzwq") format('woff'), url("/fonts/ngu.svg?mrpzwq#ngu") format('svg');
+  src: url("http://zackmaddox.com/ngu/fonts/ngu.eot?mrpzwq");
+  src: url("http://zackmaddox.com/ngu/fonts/ngu.eot?mrpzwq#iefix") format('embedded-opentype'), url("http://zackmaddox.com/ngu/fonts/ngu.ttf?mrpzwq") format('truetype'), url("http://zackmaddox.com/ngu/fonts/ngu.woff?mrpzwq") format('woff'), url("http://zackmaddox.com/ngu/fonts/ngu.svg?mrpzwq#ngu") format('svg');
 }
 [class^="icon-"],
 [class*=" icon-"] {
@@ -289,24 +289,26 @@ html {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(6,34,64,0.8);
+  background-color: rgba(0,0,0,0.9);
 }
 .modal:target {
   display: block;
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
 }
 .modal-content {
+  animation-name: example;
+  animation-duration: 500ms;
+  background-color: transparent;
+  border: 1px solid #fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   margin: auto;
-  background-color: #fff;
+  max-width: 400px;
   position: relative;
   padding: 0;
   outline: 0;
   top: 8vh;
   width: auto;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  animation-name: example;
-  animation-duration: 500ms;
 }
 #links .modal-content {
   max-width: 700px;
@@ -321,7 +323,9 @@ html {
 }
 .bio .modal-content a.arrow {
   color: #fff;
-  padding-bottom: 10vh;
+}
+.bio .modal-content a.arrow:hover {
+  color: #f9d426;
 }
 .closebtn {
   color: rgba(255,255,255,0.7);
@@ -342,7 +346,18 @@ html {
   text-decoration: none;
   cursor: pointer;
 }
-.container .headline {
+#testimonials p {
+  border-bottom: 1px solid #fff;
+  padding: 0 0 30px;
+  margin: 0 0 20px;
+}
+#testimonials p.last {
+  border: none;
+}
+.container {
+  padding: 70px 30px 40px;
+}
+.headline {
   color: #fff;
   font-size: 1.3em;
   padding-bottom: 20px;
@@ -350,20 +365,43 @@ html {
   font-weight: 600;
   line-height: 1.5em;
 }
-.container .column {
+.column {
   display: inline-block;
   width: 48%;
 }
-.container .column:first-child {
+.column:first-child {
   margin-right: 3%;
 }
-.container p {
+p {
   color: #fff;
   font-size: 0.8em;
   font-family: 'Raleway', 'Arial', sans-serif;
   font-weight: 600;
   line-height: 1.5em;
   text-transform: none;
+}
+h3 {
+  color: #fff;
+  font-size: 1.3em;
+  letter-spacing: 2px;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  font-weight: 600;
+  line-height: 1.5em;
+  text-transform: uppercase;
+}
+h4 {
+  color: #fff;
+  font-size: 0.8em;
+  letter-spacing: 3px;
+  padding-bottom: 14px;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  font-weight: 600;
+  line-height: 1.5em;
+  text-transform: uppercase;
+}
+[id^="more"] .container,
+[id*=" more"] .container {
+  padding-top: 30px;
 }
 #links a {
   color: #fff;
@@ -381,6 +419,9 @@ html {
 }
 #links a.closebtn:hover {
   color: #f9d426;
+}
+#links .modal-content {
+  width: 80%;
 }
 #morefaq,
 .bio .modal {
@@ -408,23 +449,8 @@ html {
   border: none;
   padding-bottom: 100px;
 }
-#morefaq a.arrow,
-.bio .modal a.arrow {
-  padding-bottom: 10vh;
-}
 .bio .modal .modal-content {
   max-width: 400px;
-}
-.modal {
-  background-color: rgba(0,0,0,0.9);
-}
-.modal .modal-content {
-  background-color: transparent;
-  border: 1px solid #fff;
-  max-width: 400px;
-}
-.modal .container {
-  padding: 70px 30px 40px;
 }
 .portal {
   color: #fff;
@@ -440,10 +466,6 @@ html {
 }
 .portal a:hover {
   color: #f9d426;
-}
-#contact,
-#claim {
-  background-color: rgba(0,0,0,0.9);
 }
 #contact .modal-content,
 #claim .modal-content {
@@ -598,6 +620,63 @@ body {
   width: 122vw;
   z-index: -1;
 }
+@media screen and (max-width: 1500px) {
+  .background-video {
+    width: 130vw;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .background-video {
+    width: 140vw;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .background-video {
+    margin-left: -30vw;
+    width: 152vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .background-video {
+    margin-left: -40vw;
+    width: 165vw;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .background-video {
+    margin-left: -50vw;
+    width: 185vw;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .background-video {
+    margin-left: -70vw;
+    width: 205vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .background-video {
+    margin-left: -90vw;
+    width: 235vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .background-video {
+    margin-left: -110vw;
+    width: 265vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  .background-video {
+    background: url("http://zackmaddox.com/ngu/images/video.jpg") no-repeat center center transparent;
+    height: 100%;
+    opacity: 0.6;
+    margin-left: 0;
+  }
+  .background-video video {
+    display: none;
+  }
+}
 .background-video video {
   width: 100%;
 }
@@ -616,34 +695,95 @@ body {
   width: 340px;
   z-index: 999;
 }
+@media screen and (max-width: 1400px) {
+  .wrapper .main aside {
+    width: 330px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .wrapper .main aside {
+    padding-top: 130px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .wrapper .main aside {
+    width: 26px;
+  }
+}
 .wrapper .main section {
   padding-left: 340px;
+}
+@media screen and (max-width: 1400px) {
+  .wrapper .main section {
+    padding-left: 330px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .wrapper .main section {
+    padding-left: 280px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .wrapper .main section {
+    padding-left: 53px;
+  }
 }
 .grid {
   margin-left: 40px;
   max-width: 930px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .grid {
-    max-width: 900px;
+    max-width: 890px;
   }
 }
 .panes {
   transition: 800ms;
+}
+@media screen and (max-width: 1300px) {
+  .panes {
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .panes {
+    padding-right: 40px;
+  }
 }
 .pane {
   height: 100vh;
   padding-top: 220px;
   position: relative;
 }
+@media screen and (max-width: 1500px) {
+  .pane {
+    padding-top: 130px;
+  }
+}
 .pane .next {
   bottom: 300px;
 }
+@media screen and (max-width: 1500px) {
+  .pane .next {
+    bottom: 20vh;
+  }
+}
 .pane#intro {
   padding-top: 0;
+  margin-top: -84px;
 }
 .pane#intro .next {
   bottom: 8vh;
+}
+.pane h2.mobile {
+  color: #fff;
+  font-size: 2em;
+  letter-spacing: 7px;
+  margin-bottom: 18px;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  text-transform: uppercase;
 }
 .flex {
   display: flex;
@@ -651,6 +791,15 @@ body {
 .flex .three {
   flex: 1;
   margin-bottom: 60px;
+  padding-right: 10px;
+}
+.flex .three:last-child {
+  padding-right: 0;
+}
+@media screen and (max-width: 1000px) {
+  .flex .three {
+    margin-bottom: 30px;
+  }
 }
 span.label {
   color: #fff;
@@ -707,10 +856,38 @@ li a:hover:before {
   top: 66px;
   width: 186px;
 }
+@media screen and (max-width: 1200px) {
+  .logo.fade {
+    visibility: hidden;
+  }
+}
+.logo.fade.snipe {
+  visibility: hidden;
+}
+@media screen and (max-width: 1200px) {
+  .logo.fade.snipe {
+    visibility: visible;
+    left: 20px;
+    top: 20px;
+    width: 30px;
+  }
+}
 #intro .logo {
   width: 523px;
   margin-bottom: 62px;
   margin-top: 167px;
+}
+@media screen and (max-width: 1200px) {
+  #intro .logo {
+    margin-top: 108px;
+    width: 333px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #intro .logo {
+    margin-bottom: 47px;
+    width: 222px;
+  }
 }
 .poop:target .logo.small {
   display: block;
@@ -725,11 +902,22 @@ a:hover {
 }
 .tagline {
   font-size: 1.625em;
+  letter-spacing: 0;
   margin-bottom: 40px;
+  padding-bottom: 0;
   font-family: 'Vollkorn', 'Arial', sans-serif;
   font-weight: 700;
   line-height: 1.5em;
-  line-height: 1.154em;
+  line-height: 1.65em;
+  text-transform: none;
+}
+@media screen and (max-width: 900px) {
+  .tagline {
+    font-size: 1.3em;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+  }
 }
 h2.subhead {
   font-size: 1.375em;
@@ -739,6 +927,12 @@ h2.subhead {
   line-height: 1.5em;
   font-style: italic;
   line-height: 1.636em;
+}
+@media screen and (max-width: 900px) {
+  h2.subhead {
+    margin-bottom: 20px;
+    line-height: 1.3em;
+  }
 }
 p.intro {
   font-size: 1.125em;
@@ -755,6 +949,12 @@ p.subhead {
   line-height: 1.5em;
   line-height: 1.666em;
 }
+@media screen and (max-width: 1200px) {
+  p.subhead {
+    line-height: 1.4em;
+    margin-bottom: 15px;
+  }
+}
 h3.headline {
   font-size: 1.125em;
   letter-spacing: 1px;
@@ -765,12 +965,33 @@ h3.headline {
   line-height: 1.333em;
   text-transform: uppercase;
 }
+@media screen and (max-width: 1300px) {
+  h3.headline {
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  h3.headline {
+    letter-spacing: 0;
+    font-family: 'Vollkorn', 'Arial', sans-serif;
+    font-weight: 400;
+    line-height: 1.5em;
+    text-transform: none;
+  }
+}
 .three li {
   font-size: 1.125em;
+  padding-bottom: 10px;
   font-family: 'Vollkorn', 'Arial', sans-serif;
   font-weight: 700;
   line-height: 1.5em;
-  line-height: 2em;
+  line-height: 1.2em;
+}
+@media screen and (max-width: 1000px) {
+  .three li {
+    font-size: 1em;
+    font-weight: 400;
+  }
 }
 .three li.head {
   font-size: 1.25em;
@@ -781,12 +1002,18 @@ h3.headline {
   line-height: 1.5em;
   text-transform: uppercase;
 }
+@media screen and (max-width: 1000px) {
+  .three li.head {
+    margin-bottom: 0;
+  }
+}
 ul.reg li {
   font-size: 1em;
+  padding-bottom: 10px;
   font-family: 'Vollkorn', 'Arial', sans-serif;
   font-weight: 400;
   line-height: 1.5em;
-  line-height: 2em;
+  line-height: 1.2em;
 }
 .name {
   opacity: 0;
@@ -819,6 +1046,9 @@ ul.reg li {
   background-color: #1778e5;
   opacity: 1;
   z-index: 2;
+}
+.staff a.selected img {
+  filter: none;
 }
 .staff a:first-child .name {
   background-color: #1778e5;
@@ -854,7 +1084,7 @@ ul.reg li {
   transform: rotate(180deg);
 }
 .staff .name:before {
-  background: url("/images/pin.svg") no-repeat center left transparent;
+  background: url("http://zackmaddox.com/ngu/images/pin.svg") no-repeat center left transparent;
   content: '';
   display: block;
   height: 50px;
@@ -885,11 +1115,21 @@ ul.reg li {
 .robinson {
   left: 35%;
 }
+@media screen and (max-width: 1100px) {
+  .robinson {
+    left: 40%;
+  }
+}
 .robinson img {
   width: 135px;
 }
 .sullivan {
   left: 57%;
+}
+@media screen and (max-width: 1100px) {
+  .sullivan {
+    left: 59%;
+  }
 }
 .sullivan img {
   width: 127px;
@@ -897,11 +1137,21 @@ ul.reg li {
 .greenup {
   left: 45%;
 }
+@media screen and (max-width: 1100px) {
+  .greenup {
+    left: 48%;
+  }
+}
 .greenup img {
   width: 161px;
 }
 .peace {
   left: 11%;
+}
+@media screen and (max-width: 1100px) {
+  .peace {
+    left: 16%;
+  }
 }
 .peace img {
   width: 145px;
@@ -909,17 +1159,32 @@ ul.reg li {
 .montgomery {
   left: 20%;
 }
+@media screen and (max-width: 1100px) {
+  .montgomery {
+    left: 24%;
+  }
+}
 .montgomery img {
   width: 193px;
 }
 .keith {
   left: 82%;
 }
+@media screen and (max-width: 1100px) {
+  .keith {
+    left: 79%;
+  }
+}
 .keith img {
   width: 146px;
 }
 .mathis {
   left: 67%;
+}
+@media screen and (max-width: 1100px) {
+  .mathis {
+    left: 65%;
+  }
 }
 .mathis img {
   width: 187px;
@@ -934,7 +1199,7 @@ ul.reg li {
   display: block;
 }
 .bio:before {
-  background: url("/images/pin.svg") no-repeat center left transparent;
+  background: url("http://zackmaddox.com/ngu/images/pin.svg") no-repeat center left transparent;
   content: '';
   display: block;
   height: 50px;
@@ -944,8 +1209,13 @@ ul.reg li {
   transform: rotate(-90deg);
   width: 50px;
 }
+.bio .fax:hover {
+  color: inherit;
+  transition: none;
+}
 .bio h4.employee {
   font-size: 0.9375em;
+  padding-bottom: 8px;
   font-family: 'Raleway', 'Arial', sans-serif;
   font-weight: 600;
   line-height: 1.5em;
@@ -953,13 +1223,18 @@ ul.reg li {
   line-height: 1.2em;
   text-transform: uppercase;
 }
+@media screen and (max-width: 900px) {
+  .bio h4.employee {
+    padding-bottom: 4px;
+  }
+}
 .bio h5.title {
   font-size: 0.6875em;
+  padding: 5px 0;
   font-family: 'Raleway', 'Arial', sans-serif;
   font-weight: 400;
   line-height: 1.5em;
   letter-spacing: 1px;
-  line-height: 2.182em;
   text-transform: uppercase;
 }
 .bio a {
@@ -993,7 +1268,7 @@ ul.reg li {
   width: 65%;
 }
 .bio .story p {
-  font-size: 0.9375em;
+  font-size: 1em;
   font-family: 'Vollkorn', 'Arial', sans-serif;
   font-weight: 400;
   line-height: 1.5em;
@@ -1002,6 +1277,7 @@ ul.reg li {
 }
 #perspective p.intro {
   line-height: 1.5em;
+  padding-bottom: 20px;
 }
 #perspective p.intro:nth-child(3) {
   margin-top: 40px;
@@ -1014,6 +1290,11 @@ p.q {
   line-height: 1.333em;
   padding-top: 36px;
 }
+@media screen and (max-width: 1000px) {
+  p.q {
+    padding-top: 26px;
+  }
+}
 p.a {
   font-size: 1em;
   border-bottom: 1px solid rgba(255,255,255,0.5);
@@ -1022,6 +1303,11 @@ p.a {
   line-height: 1.5em;
   line-height: 1.333em;
   padding: 14px 0 36px;
+}
+@media screen and (max-width: 1000px) {
+  p.a {
+    padding-bottom: 26px;
+  }
 }
 .forms {
   position: relative;
@@ -1059,28 +1345,133 @@ a.arrow:hover:after {
   margin-right: -10px;
   padding-left: 20px;
 }
+a.arrow .full {
+  display: inline;
+}
+@media screen and (max-width: 1000px) {
+  a.arrow .full {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  a.arrow .mobile {
+    display: inline;
+  }
+}
 a.next {
   bottom: 8vh;
   color: #fff;
-  letter-spacing: 2px;
+  font-size: 9px;
+  letter-spacing: 4px;
   position: absolute;
   font-family: 'Raleway', 'Arial', sans-serif;
   font-weight: 400;
   line-height: 1.5em;
-  right: 50%;
   text-align: center;
   text-transform: uppercase;
+  width: 100%;
+}
+@media screen and (max-width: 1100px) {
+  a.next {
+    display: none;
+  }
 }
 a.next span {
   animation: next 1s ease 3s infinite alternate;
+  bottom: 0;
   color: #fff;
-  left: 25%;
-  position: absolute;
-  top: 15px;
+  padding: 0;
+  position: relative;
+  text-align: center;
   transform: rotate(90deg);
+  width: 100%;
+}
+.tab {
+  top: 0;
+  right: 0;
+  padding: 20px 54px 20px 30px;
+  position: fixed;
+  z-index: 9999;
+}
+@media screen and (max-width: 1500px) {
+  .tab {
+    position: relative;
+  }
+}
+.tab a {
+  color: #fff;
+  display: block;
+  font-size: 10px;
+  letter-spacing: 3px;
+  opacity: 0.5;
+  position: relative;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  line-height: 22px;
+  text-align: right;
+  text-transform: uppercase;
+}
+.tab a:hover {
+  color: #fff;
+  opacity: 1;
+}
+.tab a:first-child:before {
+  background: url("http://zackmaddox.com/ngu/images/chair.svg") no-repeat center left transparent;
+  content: '';
+  display: block;
+  height: 40px;
+  right: -40px;
+  position: absolute;
+  top: 0;
+  width: 30px;
+}
+.tab a:first-child:hover:before {
+  opacity: 0.5;
+}
+.full {
+  display: block;
 }
 @media screen and (max-width: 1000px) {
   .full {
     display: none;
+  }
+}
+.mobile {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .mobile {
+    display: block;
+  }
+}
+@media screen and (max-width: 1100px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .six {
+    display: none;
+  }
+  .flex {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .flex:last-child {
+    margin-bottom: 0;
+  }
+  .flex .three {
+    margin-bottom: 0;
   }
 }

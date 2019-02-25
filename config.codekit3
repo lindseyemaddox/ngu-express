@@ -229,6 +229,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/public/images/chair.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/public/images/chair.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/public/images/donna-robinson.png": {
 		"ft": 32768,
 		"iS": 100581,
@@ -764,6 +774,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/public/images/snipe.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/public/images/snipe.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/public/images/tom-montgomery.png": {
 		"ft": 32768,
 		"iS": 181054,
@@ -792,7 +812,7 @@
 		"ft": 512,
 		"oA": 1,
 		"oAP": "/public/includes/navigation.html",
-		"oF": 0,
+		"oF": 1,
 		"oS": 0
 		},
 	"/public/includes/panes.pug": {
@@ -979,12 +999,12 @@
 		"oF": 0
 		},
 	"/views/index.pug": {
-		"cB": 0,
+		"cB": 1,
 		"cOD": 1,
 		"ft": 512,
 		"oA": 0,
 		"oAP": "/views/index.html",
-		"oF": 0,
+		"oF": 1,
 		"oS": 0
 		},
 	"/views/profile.pug": {
