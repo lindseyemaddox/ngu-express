@@ -709,6 +709,9 @@ body {
   .wrapper .main aside {
     width: 26px;
   }
+  .wrapper .main aside img {
+    opacity: 0;
+  }
 }
 .wrapper .main section {
   padding-left: 340px;
@@ -760,6 +763,11 @@ body {
     padding-top: 130px;
   }
 }
+@media screen and (max-width: 1000px) {
+  .pane {
+    height: auto;
+  }
+}
 .pane .next {
   bottom: 300px;
 }
@@ -784,6 +792,11 @@ body {
   font-weight: 300;
   line-height: 1.5em;
   text-transform: uppercase;
+}
+@media screen and (max-width: 1300px) {
+  .pane h2.mobile {
+    display: block;
+  }
 }
 .flex {
   display: flex;
@@ -1294,9 +1307,6 @@ ul.reg li {
   padding-bottom: 20px;
 }
 @media screen and (max-width: 800px) {
-  #people.pane {
-    height: 330vh;
-  }
   .bio {
     border: 1px solid #fff;
     display: block;
@@ -1328,9 +1338,6 @@ ul.reg li {
   }
 }
 @media screen and (max-width: 600px) {
-  #people.pane {
-    height: 400vh;
-  }
   .bio .story,
   .bio .card {
     float: none;
@@ -1342,9 +1349,6 @@ ul.reg li {
   }
 }
 @media screen and (max-width: 400px) {
-  #people.pane {
-    height: 490vh;
-  }
   .bio {
     border: none;
     padding: 0;
@@ -1453,7 +1457,7 @@ a.next {
   text-transform: uppercase;
   width: 100%;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1300px) {
   a.next {
     display: none;
   }
@@ -1555,5 +1559,28 @@ a.next span {
   }
   .flex .three {
     margin-bottom: 0;
+  }
+}
+@media screen and (max-height: 600px) {
+  .wrapper .main aside {
+    padding-top: 80px;
+  }
+  [class^="icon-"],
+  [class*=" icon-"] {
+    padding-bottom: 8vh;
+  }
+}
+@media screen and (max-height: 500px) {
+  .wrapper .main aside {
+    padding-top: 20px;
+  }
+  .wrapper .main aside img {
+    opacity: 0;
+  }
+}
+@media screen and (max-height: 400px) {
+  [class^="icon-"],
+  [class*=" icon-"] {
+    padding-bottom: 5vh;
   }
 }

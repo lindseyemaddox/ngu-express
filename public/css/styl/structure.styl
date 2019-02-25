@@ -84,6 +84,9 @@ body
       @media screen and (max-width: 1000px)
         width: 26px
 
+        img
+          opacity: 0
+
     section
       padding-left: $sidebar-width
 
@@ -120,6 +123,9 @@ body
   @media screen and (max-width: 1500px)
     padding-top: 130px
 
+  @media screen and (max-width: 1000px)
+    height: auto
+
   .next
     bottom: 300px
 
@@ -140,6 +146,9 @@ body
     margin-bottom: 18px
     primary-type($sans, $light)
     text-transform: uppercase
+
+    @media screen and (max-width: 1300px)
+      display: block
 
 .flex
   display: flex
