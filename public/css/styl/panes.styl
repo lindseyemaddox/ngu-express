@@ -140,6 +140,9 @@ ul.reg li
   height: 28vh
   position: relative
 
+  @media screen and (max-width: 800px)
+    display: none
+
   img
     filter: grayscale(1)
     transition: filter 400ms ease
@@ -276,8 +279,14 @@ ul.reg li
 .keith
   left: 82%
 
-  @media screen and (max-width: 1100px)
+  @media screen and (max-width: 1300px)
     left: 79%
+
+  @media screen and (max-width: 1200px)
+    left: 77%
+
+  @media screen and (max-width: 1100px)
+    left: 75%
 
   img
     width: 146px
@@ -355,6 +364,9 @@ ul.reg li
       line-height: 2em
       text-transform: uppercase
 
+    &.headshot
+      display: none
+
   .card
     float: left
     width: 32%
@@ -369,6 +381,70 @@ ul.reg li
       primary-type($serif, $regular)
       line-height: 1.6em
       padding-bottom: 20px
+
+@media screen and (max-width: 800px)
+
+  #people.pane
+    height: 330vh
+
+  .bio
+    border: 1px solid $white
+    display: block
+    height: auto
+    padding: 20px 0 20px 20px
+
+    &:before
+      left: -36px
+      top: 4px
+
+    h4.employee
+      padding-top: 3px
+
+    .story
+      float: right
+      margin-right: 3%
+      width: 64%
+
+    .card
+      float: left
+      width: 30%
+      margin-left: 0
+
+      .fax
+        display: none
+
+    .modal-content p
+      font-size: 1em
+
+@media screen and (max-width: 600px)
+
+  #people.pane
+    height: 400vh
+
+  .bio
+    .story, .card
+      float: none
+      margin: 0
+      width: 90%
+
+    .card
+      margin-bottom: 20px
+
+@media screen and (max-width: 400px)
+
+  #people.pane
+    height: 490vh
+
+  .bio
+    border: none
+    padding: 0
+
+    &:before
+      left: -54px
+      top: -14px
+
+    a.arrow
+      margin-top: 0
 
 
 // ---------------------- perspective -----------------------

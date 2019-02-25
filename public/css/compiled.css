@@ -1022,6 +1022,11 @@ ul.reg li {
   height: 28vh;
   position: relative;
 }
+@media screen and (max-width: 800px) {
+  .staff {
+    display: none;
+  }
+}
 .staff img {
   filter: grayscale(1);
   transition: filter 400ms ease;
@@ -1170,9 +1175,19 @@ ul.reg li {
 .keith {
   left: 82%;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1300px) {
   .keith {
     left: 79%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .keith {
+    left: 77%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .keith {
+    left: 75%;
   }
 }
 .keith img {
@@ -1258,6 +1273,9 @@ ul.reg li {
   line-height: 2em;
   text-transform: uppercase;
 }
+.bio a.headshot {
+  display: none;
+}
 .bio .card {
   float: left;
   width: 32%;
@@ -1274,6 +1292,70 @@ ul.reg li {
   line-height: 1.5em;
   line-height: 1.6em;
   padding-bottom: 20px;
+}
+@media screen and (max-width: 800px) {
+  #people.pane {
+    height: 330vh;
+  }
+  .bio {
+    border: 1px solid #fff;
+    display: block;
+    height: auto;
+    padding: 20px 0 20px 20px;
+  }
+  .bio:before {
+    left: -36px;
+    top: 4px;
+  }
+  .bio h4.employee {
+    padding-top: 3px;
+  }
+  .bio .story {
+    float: right;
+    margin-right: 3%;
+    width: 64%;
+  }
+  .bio .card {
+    float: left;
+    width: 30%;
+    margin-left: 0;
+  }
+  .bio .card .fax {
+    display: none;
+  }
+  .bio .modal-content p {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 600px) {
+  #people.pane {
+    height: 400vh;
+  }
+  .bio .story,
+  .bio .card {
+    float: none;
+    margin: 0;
+    width: 90%;
+  }
+  .bio .card {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #people.pane {
+    height: 490vh;
+  }
+  .bio {
+    border: none;
+    padding: 0;
+  }
+  .bio:before {
+    left: -54px;
+    top: -14px;
+  }
+  .bio a.arrow {
+    margin-top: 0;
+  }
 }
 #perspective p.intro {
   line-height: 1.5em;
